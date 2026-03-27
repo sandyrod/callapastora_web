@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Evitar listar directorios
+Options -Indexes
+
+# Si el archivo buscado no existe, no es un directorio y existe su versión .html, entonces cargar el .html internamente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L,QSA]
+
+# Redireccionar de un archivo .html a su URL sin extensión (para evitar contenido duplicado y aplicar URL amigable si alguien entra a .html)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]

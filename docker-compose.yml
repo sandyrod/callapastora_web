@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  web_callapastora:
+    build: .
+    container_name: callapastora_web
+    restart: unless-stopped
+    # No es obligatorio exponer puertos al host si usas NPM, 
+    # pero si quieres acceder localmente, usa el 8082 para no chocar con el 8080 de la API.
+    ports:
+      - "8082:80" 
+    networks:
+      - payment_network
+
+networks:
+  # Usamos el nombre exacto que detectamos con 'docker network ls'
+  payment_network:
+    external: true
+    name: paymentvalidator_payment_network
