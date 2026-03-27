@@ -1,0 +1,41 @@
+server {
+    listen       80;
+    server_name  localhost;
+
+    root   /usr/share/nginx/html;
+    index  index.html;
+
+    # Interceptar Error 503 para mostrar la página Under Construction
+    error_page 503 @maintenance;
+    location @maintenance {
+        rewrite ^(.*)$ /under-construction.html break;
+    }
+
+    location / {
+        # Evaluar la variable de entorno mediante envsubst configurada en Docker Compose
+        set $maintenance "${MAINTENANCE_MODE}";
+        if ($maintenance = "true") {
+            return 503;
+        }
+
+        # Comportamiento normal si no está en mantenimiento
+        try_files $uri $uri/ $uri.html =404;
+    }
+
+    # Redireccionar explícito de .html a URLs amigables
+    if ($request_uri ~ ^/(.*)\.html(\?.*)?$) {
+        return 301 /$1$2;
+    }
+
+    # Desactivar interceptor 503 para archivos visuales para que la web de mantenimiento se renderice correctamente
+    location ~* \.(css|js|jpg|jpeg|png|webp|svg|woff|woff2)$ {
+        expires 1y;
+        add_header Cache-Control "public, max-age=31536000";
+    }
+
+    # Página de error del servidor
+    error_page   500 502 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}

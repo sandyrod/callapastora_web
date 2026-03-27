@@ -1,8 +1,8 @@
 # Usar NGINX puro en Alpine (extremadamente ligero, ~10MB)
 FROM nginx:alpine
 
-# Copiar la configuración personalizada de NGINX para permitir URLs amigables
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copiar como plantilla para que Nginx inyecte la variable de entorno
+COPY nginx.conf.template /etc/nginx/templates/default.conf.template
 
 # Copiar los ficheros estáticos al directorio público de NGINX
 COPY . /usr/share/nginx/html/
