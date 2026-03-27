@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contacte a Cal La Pastora. Solicite hoy su cotización B2B, obtenga información técnica o consulte nuestra logística para grandes volúmenes.">
+    <meta name="description"
+        content="Contacte a Cal La Pastora. Solicite hoy su cotización B2B, obtenga información técnica o consulte nuestra logística para grandes volúmenes.">
     <title>Contacto B2B | Cal La Pastora</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/icon-300x300.webp">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <!-- Top Bar -->
@@ -23,7 +28,11 @@
     <!-- Header / Navbar -->
     <header class="navbar">
         <div class="container">
-            <a href="./" class="navbar-brand">La Pastora</a>
+            <a href="./" class="navbar-brand">
+                <img src="assets/icon-150x150.webp" alt="La Pastora" class="d-inline-block align-top brand-logo"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                <span class="brand-text" style="display: none;">La Pastora</span>
+            </a>
             <button class="menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">☰</button>
             <nav>
                 <ul class="nav-links">
@@ -32,7 +41,8 @@
                     <li><a href="cal-viva">Producto</a></li>
                     <li><a href="sectores-aplicaciones">Sectores</a></li>
                     <li><a href="logistica-almacenamiento">Logística</a></li>
-                    <li class="nav-cta"><a href="contacto" class="btn btn-primary" style="color: white; border-bottom: none; padding: 0.6rem 1.5rem;">Contáctanos</a></li>
+                    <li class="nav-cta"><a href="contacto" class="btn btn-primary"
+                            style="color: white; border-bottom: none; padding: 0.6rem 1.5rem;">Contáctanos</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +53,8 @@
         <section style="background: var(--primary-dark); padding: 5rem 0; position: relative;">
             <div class="container fade-in visible" style="text-align: center; position: relative; z-index: 2;">
                 <h1 style="color: white; font-size: 3rem;">CONTACTO COMERCIAL</h1>
-                <p style="font-size: 1.2rem; margin: 0 auto; color: #e2e8f0; max-width: 800px;">Nuestro equipo técnico y de ventas está listo para dar soporte inmediato a sus requerimientos B2B.</p>
+                <p style="font-size: 1.2rem; margin: 0 auto; color: #e2e8f0; max-width: 800px;">Nuestro equipo técnico y
+                    de ventas está listo para dar soporte inmediato a sus requerimientos B2B.</p>
             </div>
         </section>
 
@@ -52,17 +63,29 @@
             <div class="container fade-in">
                 <div class="grid-2">
                     <!-- Formulario B2B -->
-                    <div style="background: var(--bg-light); padding: 3rem; border-radius: 12px; box-shadow: var(--shadow-sm); border-top: 5px solid var(--primary);">
-                        <h2 style="margin-bottom: 2rem; color: var(--primary-dark); text-align: center; font-family: 'Roboto Slab', serif;">Solicitar Cotización</h2>
+                    <div
+                        style="background: var(--bg-light); padding: 3rem; border-radius: 12px; box-shadow: var(--shadow-sm); border-top: 5px solid var(--primary);">
+                        <h2
+                            style="margin-bottom: 2rem; color: var(--primary-dark); text-align: center; font-family: 'Roboto Slab', serif;">
+                            Solicitar Cotización</h2>
                         <form id="contact-form">
-                            <label for="nombre" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Nombre Completo / Contacto *</label>
-                            <input type="text" id="nombre" name="nombre" class="form-control" required placeholder="Ej: Ing. Juan Pérez">
+                            <label for="nombre"
+                                style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Nombre
+                                Completo / Contacto *</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required
+                                placeholder="Ej: Ing. Juan Pérez">
 
-                            <label for="empresa" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Nombre de la Empresa *</label>
-                            <input type="text" id="empresa" name="empresa" class="form-control" required placeholder="Razón Social">
+                            <label for="empresa"
+                                style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Nombre
+                                de la Empresa *</label>
+                            <input type="text" id="empresa" name="empresa" class="form-control" required
+                                placeholder="Razón Social">
 
-                            <label for="sector" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Sector Industrial *</label>
-                            <select id="sector" name="sector" class="form-control" required style="cursor: pointer; appearance: auto;">
+                            <label for="sector"
+                                style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Sector
+                                Industrial *</label>
+                            <select id="sector" name="sector" class="form-control" required
+                                style="cursor: pointer; appearance: auto;">
                                 <option value="" disabled selected>Seleccione su sector...</option>
                                 <option value="Siderurgia/Mineria">Siderurgia / Minería</option>
                                 <option value="Quimica">Química / Papelera</option>
@@ -72,37 +95,61 @@
                                 <option value="Otro">Otro</option>
                             </select>
 
-                            <label for="volumen" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Volumen Estimado de Pedido (Ton) *</label>
-                            <input type="number" id="volumen" name="volumen" class="form-control" required placeholder="Ingrese las toneladas aproximadas">
+                            <label for="volumen"
+                                style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Volumen
+                                Estimado de Pedido (Ton) *</label>
+                            <input type="number" id="volumen" name="volumen" class="form-control" required
+                                placeholder="Ingrese las toneladas aproximadas">
 
-                            <label for="email" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Correo Electrónico Corporativo *</label>
-                            <input type="email" id="email" name="email" class="form-control" required placeholder="nombre@empresa.com">
+                            <label for="email"
+                                style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Correo
+                                Electrónico Corporativo *</label>
+                            <input type="email" id="email" name="email" class="form-control" required
+                                placeholder="nombre@empresa.com">
 
-                            <label for="mensaje" style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Mensaje / Consultas Técnicas</label>
-                            <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Detalle aquí requerimientos específicos..."></textarea>
+                            <label for="mensaje"
+                                style="font-weight: 500; font-size: 0.9rem; margin-bottom: 0.3rem; display: block; padding-left:1rem;">Mensaje
+                                / Consultas Técnicas</label>
+                            <textarea id="mensaje" name="mensaje" class="form-control"
+                                placeholder="Detalle aquí requerimientos específicos..."></textarea>
 
-                            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 1rem; margin-top:1rem;">ENVIAR SOLICITUD</button>
+                            <button type="submit" class="btn btn-primary"
+                                style="width: 100%; font-size: 1rem; padding: 1rem; margin-top:1rem;">ENVIAR
+                                SOLICITUD</button>
                         </form>
                     </div>
 
                     <!-- Canales Directos & Mapa -->
                     <div>
-                        <div style="background: var(--primary-dark); color: white; padding: 3rem; border-radius: 12px; margin-bottom: var(--spacing-sm);">
-                            <h3 style="color: white; font-family: 'Roboto Slab', serif; margin-bottom: 1.5rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">CANALES DE ATENCIÓN</h3>
-                            <p style="margin-top: 1rem; color: #ddd;"><strong>📍 Planta Industrial:</strong><br> Zona Industrial, Provincia A, ARG</p>
-                            <p style="margin-top: 1rem; color: #ddd;"><strong>📧 Correo de Ventas B2B:</strong><br> ventas@callapastora.com</p>
-                            <p style="margin-top: 1rem; color: #ddd;"><strong>📞 Teléfono:</strong><br> +54 9 11 1234 5678</p>
+                        <div
+                            style="background: var(--primary-dark); color: white; padding: 3rem; border-radius: 12px; margin-bottom: var(--spacing-sm);">
+                            <h3
+                                style="color: white; font-family: 'Roboto Slab', serif; margin-bottom: 1.5rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem;">
+                                CANALES DE ATENCIÓN</h3>
+                            <p style="margin-top: 1rem; color: #ddd;"><strong>📍 Planta Industrial:</strong><br>
+                                CARRETERA VIA LAS VELAS FUNDO SAN JUDAS TADEO
+                                LOCAL NRO S/N SECTOR LAS VELAS YARITAGUA YARACUY ZONA POSTAL 3203</p>
+                            <p style="margin-top: 1rem; color: #ddd;"><strong>📧 Correo de Ventas B2B:</strong><br>
+                                ventas@callapastora.com</p>
+                            <p style="margin-top: 1rem; color: #ddd;"><strong>📞 Teléfono:</strong><br> +58 416-6337475
+                            </p>
                             <br>
-                            <a href="https://wa.me/123456789" class="btn btn-primary" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; background-color: #25D366; border:none; color: white;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                            <a href="https://wa.me/584166337475" class="btn btn-primary" target="_blank"
+                                style="display: flex; align-items: center; justify-content: center; gap: 10px; background-color: #25D366; border:none; color: white;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
                                 </svg> WHATSAPP DIRECTO
                             </a>
                         </div>
 
                         <!-- Mapa decorativo (iframe de Google Maps) -->
                         <div class="img-wrapper" style="height: 350px;">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.12876!2d-58.4!3d-34.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzAwLjAiUyA1OMKwMjQnMDAuMCJX!5e0!3m2!1ses!2sar!4v1611234567890!5m2!1ses!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16207.415846427886!2d-69.14865079947832!3d10.0458670764755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875be8be5e7353%3A0xf0082798af08d172!2sCAL%20LA%20PASTORA%20CA!5e1!3m2!1ses-419!2sve!4v1774638159644!5m2!1ses-419!2sve"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 
                     </div>
@@ -117,8 +164,10 @@
         <div class="container">
             <div class="grid-3">
                 <div>
-                    <h3 class="navbar-brand text-white" style="margin-bottom:1rem; font-family: 'Roboto Slab', serif;">La Pastora</h3>
-                    <p style="color: #999;">Controlamos toda la cadena de valor: desde la materia prima hasta el despacho final.</p>
+                    <h3 class="navbar-brand text-white" style="margin-bottom:1rem; font-family: 'Roboto Slab', serif;">
+                        La Pastora</h3>
+                    <p style="color: #999;">Controlamos toda la cadena de valor: desde la materia prima hasta el
+                        despacho final.</p>
                 </div>
                 <div>
                     <h3>SECCIONES</h3>
@@ -131,11 +180,12 @@
                     <h3>CONTACTO B2B</h3>
                     <p>📍 Sede Central / Planta Industrial</p>
                     <p>📧 ventas@callapastora.com</p>
-                    <p>📞 +54 9 11 1234 5678</p>
+                    <p>📞 +58 416-6337475</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; <span id="year"></span> Cal La Pastora. Política de Calidad y Tratamiento de Datos. Todos los derechos reservados.
+                &copy; <span id="year"></span> Cal La Pastora. Política de Calidad y Tratamiento de Datos. Todos los
+                derechos reservados.
             </div>
         </div>
     </footer>
@@ -143,4 +193,5 @@
     <script src="js/main.js"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
+
 </html>
