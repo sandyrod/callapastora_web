@@ -510,6 +510,13 @@ textarea.form-control {
   transform: scale(1.05);
 }
 
+.brand-logo {
+  height: 45px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 /* Animations */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(30px); }
@@ -529,7 +536,7 @@ textarea.form-control {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .hero h1 { font-size: 3rem; }
+  .hero h1 { font-size: 3rem !important; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .grid-2 { grid-template-columns: 1fr; }
   .filosofia-card { grid-template-columns: 1fr; margin-top: -5rem; }
@@ -538,14 +545,37 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
+  /* Global Overrides for Inline Styles */
+  h1, [style*="font-size: 3rem"] { font-size: 2.2rem !important; }
+  h2 { font-size: 1.8rem !important; }
+  h3 { font-size: 1.4rem !important; }
+  
+  /* Overrides for hardcoded paddings */
+  section, [style*="padding: 5rem 0"] { padding: 3rem 0 !important; }
+  [style*="padding: 3rem"] { padding: 1.5rem !important; }
+  [style*="padding: 4rem"] { padding: 2rem !important; }
+  .filosofia-card-body { padding: 1.5rem !important; }
+
+  /* Hero Elements */
+  .hero h1 { font-size: 2.5rem !important; }
+  p.subtitle { font-size: 1.1rem !important; }
+  .section-title { font-size: 1.6rem !important; flex-wrap: wrap; text-align: center; justify-content: center !important; }
+  .section-title::before, .section-title::after { max-width: 40px; }
+  
+  /* Navbar adjustments */
+  .top-bar { display: none; }
+  body { padding-top: 65px; }
+  .navbar { top: 0; padding: 0.8rem 0; }
+  
   .nav-links {
     position: fixed;
-    top: 60px;
+    top: 65px;
     left: -100%;
     flex-direction: column;
     background: var(--bg-white);
     width: 100%;
+    height: calc(100vh - 65px);
+    overflow-y: auto;
     text-align: center;
     padding: var(--spacing-md) 0;
     box-shadow: var(--shadow-md);
@@ -553,10 +583,21 @@ textarea.form-control {
   }
   .nav-links.active { left: 0; }
   .menu-btn { display: block; }
+  
+  /* Grids */
   .grid-3 { grid-template-columns: 1fr; }
-  .section-title { font-size: 1.8rem; }
-  .section-title::before, .section-title::after { max-width: 50px; }
-  .top-bar { display: none; } /* Hide on small mobile to save space */
-  body { padding-top: 70px; }
-  .navbar { top: 0; }
+  .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
+  
+  /* Components */
+  .form-control { padding: 0.8rem 1.2rem; }
+  .img-wrapper { margin-bottom: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem !important; }
+  h1, [style*="font-size: 3rem"] { font-size: 1.8rem !important; }
+  .section-title { font-size: 1.4rem !important; }
+  .brand-logo { height: 35px; }
+  .btn { padding: 0.7rem 1.5rem; font-size: 0.8rem; }
+  .wa-float { width: 50px; height: 50px; font-size: 25px; bottom: 20px; right: 20px; }
 }
