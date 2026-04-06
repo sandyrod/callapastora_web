@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Slab:wght@400;600;700&display=swap');
 
 :root {
-  --primary: #005541; /* Pantone 3308 C */
+  --primary: #005541;
+  /* Pantone 3308 C */
   --primary-light: #007a5d;
   --primary-dark: #003025;
-  --text-dark: #4d4d4d; /* Pantone 70% Black */
+  --text-dark: #4d4d4d;
+  /* Pantone 70% Black */
   --text-light: #ffffff;
   --bg-light: #f9fafb;
   --bg-white: #ffffff;
@@ -12,10 +14,10 @@
   --glass-bg: rgba(255, 255, 255, 0.95);
   --glass-border: rgba(255, 255, 255, 0.2);
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
-  --shadow-md: 0 10px 15px rgba(0,0,0,0.1);
-  --shadow-lg: 0 20px 25px rgba(0,0,0,0.15);
-  
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
@@ -35,11 +37,18 @@ body {
   background-color: var(--bg-light);
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 110px; /* Offset for top-bar + navbar */
+  padding-top: 110px;
+  /* Offset for top-bar + navbar */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Slab', serif; /* Semi-serif for premium industrial feel */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+  /* Semi-serif for premium industrial feel */
   color: var(--primary-dark);
   margin-bottom: var(--spacing-sm);
   font-weight: 700;
@@ -66,8 +75,13 @@ a:hover {
   margin: 0 auto;
 }
 
-.text-center { text-align: center; }
-.text-white { color: var(--text-light); }
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: var(--text-light);
+}
 
 /* Pill Buttons */
 .btn {
@@ -75,7 +89,8 @@ a:hover {
   padding: 0.8rem 2rem;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px;
+  /* Pill shape */
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.85rem;
@@ -110,6 +125,7 @@ a:hover {
   background: var(--text-dark);
   color: var(--text-light);
 }
+
 .btn-dark:hover {
   background: black;
   color: var(--text-light);
@@ -121,7 +137,8 @@ a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--primary); /* using official color */
+  background-color: var(--primary);
+  /* using official color */
   color: white;
   z-index: 1001;
   font-size: 0.8rem;
@@ -130,6 +147,7 @@ a:hover {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
+
 .top-bar .social-icons {
   position: absolute;
   right: 5%;
@@ -138,6 +156,7 @@ a:hover {
   display: flex;
   gap: 10px;
 }
+
 .top-bar .social-icons a {
   color: white;
   font-size: 1rem;
@@ -146,7 +165,8 @@ a:hover {
 /* Header & Navbar */
 .navbar {
   position: fixed;
-  top: 30px; /* below top bar */
+  top: 30px;
+  /* below top bar */
   left: 0;
   width: 100%;
   background: var(--bg-white);
@@ -189,7 +209,8 @@ a:hover {
   padding: 0.5rem 0;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--primary);
   border-bottom: 2px solid var(--primary);
 }
@@ -222,9 +243,12 @@ a:hover {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(rgba(0,48,37,0.8), rgba(0,48,37,0.5)),
-              url('https://images.unsplash.com/photo-1540915637213-90d1f70a1a06?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 48, 37, 0.8), rgba(0, 48, 37, 0.5)),
+    url('https://images.unsplash.com/photo-1540915637213-90d1f70a1a06?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
   z-index: 1;
 }
 
@@ -271,7 +295,9 @@ section {
   gap: 20px;
   color: var(--primary-dark);
 }
-.section-title::before, .section-title::after {
+
+.section-title::before,
+.section-title::after {
   content: "";
   height: 2px;
   background-color: var(--primary);
@@ -334,6 +360,7 @@ section {
 .sector-wrapper {
   text-align: center;
 }
+
 .sector-icon {
   width: 120px;
   height: 120px;
@@ -348,6 +375,7 @@ section {
   transition: var(--transition);
   background: var(--bg-white);
 }
+
 .sector-wrapper:hover .sector-icon {
   background: var(--primary);
   color: white;
@@ -361,6 +389,7 @@ section {
   position: relative;
   margin-top: 4rem;
 }
+
 .filosofia-card {
   background: var(--bg-white);
   border-radius: 12px;
@@ -368,14 +397,17 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
-  margin-top: -10rem; /* Pull up to overlap */
+  margin-top: -10rem;
+  /* Pull up to overlap */
   position: relative;
   z-index: 10;
 }
+
 .filosofia-card-img {
   background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800') center/cover;
   min-height: 400px;
 }
+
 .filosofia-card-body {
   padding: 4rem;
   display: flex;
@@ -389,17 +421,20 @@ section {
   padding: var(--spacing-md) 0;
   text-align: center;
 }
+
 .pre-footer h2 {
   color: white;
   margin-bottom: var(--spacing-sm);
   font-size: 2rem;
   font-weight: 700;
 }
+
 .pre-footer .btn {
   background: var(--text-dark);
   color: white;
   border: 2px solid var(--text-dark);
 }
+
 .pre-footer .btn:hover {
   background: transparent;
   color: var(--text-dark);
@@ -448,7 +483,8 @@ footer a:hover {
   padding: 1rem 1.5rem;
   margin-bottom: var(--spacing-sm);
   border: 1px solid #ccc;
-  border-radius: 50px; /* pill shape for inputs */
+  border-radius: 50px;
+  /* pill shape for inputs */
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   transition: var(--transition);
@@ -478,7 +514,7 @@ textarea.form-control {
   border-radius: 50px;
   text-align: center;
   font-size: 30px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -488,7 +524,7 @@ textarea.form-control {
 
 .wa-float:hover {
   transform: scale(1.1);
-  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
   color: white;
 }
 
@@ -511,7 +547,7 @@ textarea.form-control {
 }
 
 .brand-logo {
-  height: 45px;
+  height: 150px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -519,8 +555,15 @@ textarea.form-control {
 
 /* Animations */
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {
@@ -536,37 +579,101 @@ textarea.form-control {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .hero h1 { font-size: 3rem !important; }
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .grid-2 { grid-template-columns: 1fr; }
-  .filosofia-card { grid-template-columns: 1fr; margin-top: -5rem; }
-  .filosofia-card-img { min-height: 250px; }
-  .filosofia-card-body { padding: 2rem; }
+  .hero h1 {
+    font-size: 3rem !important;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .filosofia-card {
+    grid-template-columns: 1fr;
+    margin-top: -5rem;
+  }
+
+  .filosofia-card-img {
+    min-height: 250px;
+  }
+
+  .filosofia-card-body {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
+
   /* Global Overrides for Inline Styles */
-  h1, [style*="font-size: 3rem"] { font-size: 2.2rem !important; }
-  h2 { font-size: 1.8rem !important; }
-  h3 { font-size: 1.4rem !important; }
-  
+  h1,
+  [style*="font-size: 3rem"] {
+    font-size: 2.2rem !important;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  h3 {
+    font-size: 1.4rem !important;
+  }
+
   /* Overrides for hardcoded paddings */
-  section, [style*="padding: 5rem 0"] { padding: 3rem 0 !important; }
-  [style*="padding: 3rem"] { padding: 1.5rem !important; }
-  [style*="padding: 4rem"] { padding: 2rem !important; }
-  .filosofia-card-body { padding: 1.5rem !important; }
+  section,
+  [style*="padding: 5rem 0"] {
+    padding: 3rem 0 !important;
+  }
+
+  [style*="padding: 3rem"] {
+    padding: 1.5rem !important;
+  }
+
+  [style*="padding: 4rem"] {
+    padding: 2rem !important;
+  }
+
+  .filosofia-card-body {
+    padding: 1.5rem !important;
+  }
 
   /* Hero Elements */
-  .hero h1 { font-size: 2.5rem !important; }
-  p.subtitle { font-size: 1.1rem !important; }
-  .section-title { font-size: 1.6rem !important; flex-wrap: wrap; text-align: center; justify-content: center !important; }
-  .section-title::before, .section-title::after { max-width: 40px; }
-  
+  .hero h1 {
+    font-size: 2.5rem !important;
+  }
+
+  p.subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  .section-title {
+    font-size: 1.6rem !important;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center !important;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    max-width: 40px;
+  }
+
   /* Navbar adjustments */
-  .top-bar { display: none; }
-  body { padding-top: 65px; }
-  .navbar { top: 0; padding: 0.8rem 0; }
-  
+  .top-bar {
+    display: none;
+  }
+
+  body {
+    padding-top: 65px;
+  }
+
+  .navbar {
+    top: 0;
+    padding: 0.8rem 0;
+  }
+
   .nav-links {
     position: fixed;
     top: 65px;
@@ -581,23 +688,63 @@ textarea.form-control {
     box-shadow: var(--shadow-md);
     transition: var(--transition);
   }
-  .nav-links.active { left: 0; }
-  .menu-btn { display: block; }
-  
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
   /* Grids */
-  .grid-3 { grid-template-columns: 1fr; }
-  .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
-  
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   /* Components */
-  .form-control { padding: 0.8rem 1.2rem; }
-  .img-wrapper { margin-bottom: 1rem; }
+  .form-control {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .img-wrapper {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero h1 { font-size: 2rem !important; }
-  h1, [style*="font-size: 3rem"] { font-size: 1.8rem !important; }
-  .section-title { font-size: 1.4rem !important; }
-  .brand-logo { height: 35px; }
-  .btn { padding: 0.7rem 1.5rem; font-size: 0.8rem; }
-  .wa-float { width: 50px; height: 50px; font-size: 25px; bottom: 20px; right: 20px; }
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+
+  h1,
+  [style*="font-size: 3rem"] {
+    font-size: 1.8rem !important;
+  }
+
+  .section-title {
+    font-size: 1.4rem !important;
+  }
+
+  .brand-logo {
+    height: 35px;
+  }
+
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .wa-float {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    bottom: 20px;
+    right: 20px;
+  }
 }
