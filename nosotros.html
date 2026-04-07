@@ -81,12 +81,14 @@
 
     <!-- Page Header -->
     <main>
-        <section style="background: var(--primary-dark); color: white; padding: 5rem 0; text-align: center;">
-            <div class="container fade-in visible">
+        <section style="background: var(--primary-dark); color: white; padding: 5rem 0; text-align: center; position: relative;">
+            <div class="container fade-in visible" style="position: relative; z-index: 2;">
                 <h1 style="color: white; font-size: 3rem;">NUESTRA FILOSOFÍA CORPORATIVA</h1>
                 <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #e2e8f0;">Integración vertical,
                     seriedad corporativa y un estricto compromiso con la calidad en cada tonelada de producto.</p>
             </div>
+            <!-- Background Image -->
+            <div style="position: absolute; top:0; left: 0; width: 100%; height: 100%; opacity: 0.15; background: url('assets/INDUSTRIA-SIDERURGICA.webp') center/cover; z-index: 1;"></div>
         </section>
 
         <!-- Historia y Filosofía -->
